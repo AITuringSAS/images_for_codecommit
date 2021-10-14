@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>create_tfrecords API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>create_tfrecords</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import hashlib
+import io
+import os
+import glob
+import random
+from shutil import copy2
+
+from absl import app
+from absl import flags
+from absl import logging
+from lxml import etree
+
+import PIL.Image
+import PIL.ImageOps
+import tensorflow.compat.v1 as tf
+import cv2
+import json
+
+# import dataset.tfrecord_util as tfrecord_util
+# import dataset.create_yaml as create_yaml
+import tfrecord_util
+import create_yaml
+
+import tempfile
+
+
+flags.DEFINE_string(&#39;data_dir&#39;, &#39;temp&#39;, &#39;Root directory to raw dataset&#39;)
+flags.DEFINE_string(&#39;output_path&#39;, &#39;&#39;, &#39;Path to output TFRecord&#39;)
+flags.DEFINE_integer(&#39;num_shards&#39;, 10, &#39;Number of shards for output file.&#39;)
+flags.DEFINE_boolean(&#39;use_data_augmentation&#39;, False, &#39;Define the use of data augmentation&#39;)
+flags.DEFINE_float(&#39;perc_split_training&#39;, 1, &#39;Define the percentage to the training set&#39;)
+
+
+FLAGS = flags.FLAGS
+
+GLOBAL_IMG_ID = 0  # global image id.
+GLOBAL_ANN_ID = 0  # global annotation id.
+tmpDir = tempfile.TemporaryDirectory()
+
+
+def unique_list(list_):
+    # intilize a null list
+    unique_list = []
+
+    # traverse for all elements
+    for x in list_:
+        # check if exists in unique_list or not
+        if x not in unique_list:
+            unique_list.append(x)
+    return unique_list
+
+
+def splitall(path):
+    allparts = []
+    while 1:
+        parts = os.path.split(path)
+        if parts[0] == path:  # sentinel for absolute paths
+            allparts.insert(0, parts[0])
+            break
+        elif parts[1] == path:  # sentinel for relative paths
+            allparts.insert(0, parts[1])
+            break
+        else:
+            path = parts[0]
+            allparts.insert(0, parts[1])
+    return allparts
+
+
+def create_labelmapDict_patch(list_all_images, path_dataset):
+    list_all_classes = []
+    for idx, name_image_ in enumerate(list_all_images):
+        # print(name_image_)
+        _, tail = os.path.split(name_image_)
+        temp_obj = []
+        name_file_xml_all = os.path.join(path_dataset, &#39;LABELS&#39;, tail[0:-3] + &#39;xml&#39;)
+        # print(name_file_xml_all)
+        if os.path.exists(name_file_xml_all):
+            with tf.gfile.GFile(name_file_xml_all, &#39;rb&#39;) as fid:
+                xml_str = fid.read()
+            xml = etree.fromstring(xml_str)
+            data = tfrecord_util.recursive_parse_xml_to_dict(xml)[&#39;annotation&#39;]
+            if &#39;object&#39; in data:
+                for obj in data[&#39;object&#39;]:
+                    name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;).strip()
+                    if name_in_obj_ != &#39;INCOMPLETAS&#39;:
+                        list_all_classes.append(name_in_obj_)
+                        temp_obj.append(obj)
+    list_all_classes = unique_list(list_all_classes)
+    list_all_classes.sort()
+    # list_classes = [dict_patch[name_] for name_ in list_old]
+    list_all_classes.insert(0, &#39;background&#39;)
+    labelmap_ = {el: k for k, el in enumerate(list_all_classes)}
+    return labelmap_
+
+
+def get_image_id(filename):
+    del filename
+    global GLOBAL_IMG_ID
+    GLOBAL_IMG_ID += 1
+    return GLOBAL_IMG_ID
+
+
+def dict_to_tf_example(data,
+                       label_map_dict,
+                       ignore_difficult_instances=False):
+    full_path = os.path.join(FLAGS.data_dir, &#39;IMAGENES&#39;, data[&#39;filename&#39;])[0:-3] + &#39;jpg&#39;
+    image_ = cv2.imread(full_path)
+    with tf.gfile.GFile(full_path, &#39;rb&#39;) as fid:
+        encoded_jpg = fid.read()
+    encoded_jpg_io = io.BytesIO(encoded_jpg)
+    image = PIL.Image.open(encoded_jpg_io)
+    if image.format != &#39;JPEG&#39;:
+        raise ValueError(&#39;Image format not JPEG&#39;)
+    key = hashlib.sha256(encoded_jpg).hexdigest()
+    image_id = get_image_id(data[&#39;filename&#39;])
+    width = int(image_.shape[1])  # int(data[&#39;size&#39;][&#39;width&#39;])
+    height = int(image_.shape[0])  # int(data[&#39;size&#39;][&#39;height&#39;])
+    image_id = get_image_id(data[&#39;filename&#39;])
+    xmin = []
+    ymin = []
+    xmax = []
+    ymax = []
+    area = []
+    classes = []
+    classes_text = []
+    if &#39;object&#39; in data:
+        for obj in data[&#39;object&#39;]:
+            name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;).strip()
+            if name_in_obj_ in label_map_dict:
+                x_pos = [int(obj[&#39;bndbox&#39;][&#39;xmax&#39;]), int(obj[&#39;bndbox&#39;][&#39;xmin&#39;])]
+                y_pos = [int(obj[&#39;bndbox&#39;][&#39;ymax&#39;]), int(obj[&#39;bndbox&#39;][&#39;ymin&#39;])]
+                xmin.append((float(min(x_pos))) / width)
+                ymin.append((float(min(y_pos))) / height)
+                xmax.append((float(max(x_pos))) / width)
+                ymax.append((float(max(y_pos))) / height)
+                area.append((xmax[-1] - xmin[-1]) * (ymax[-1] - ymin[-1]))
+                classes_text.append(name_in_obj_.replace(&#39; &#39;, &#39;&#39;).encode(&#39;utf8&#39;))
+                classes.append(int(label_map_dict[name_in_obj_]))  # label_map_dict[obj[&#39;name&#39;]])
+
+    example = tf.train.Example(
+        features=tf.train.Features(
+            feature={
+                &#39;image/height&#39;:
+                tfrecord_util.int64_feature(height),
+                &#39;image/width&#39;:
+                tfrecord_util.int64_feature(width),
+                &#39;image/filename&#39;:
+                tfrecord_util.bytes_feature(data[&#39;filename&#39;].encode(&#39;utf8&#39;)),
+                &#39;image/source_id&#39;:
+                tfrecord_util.bytes_feature(str(image_id).encode(&#39;utf8&#39;)),
+                &#39;image/key/sha256&#39;:
+                tfrecord_util.bytes_feature(key.encode(&#39;utf8&#39;)),
+                &#39;image/encoded&#39;:
+                tfrecord_util.bytes_feature(encoded_jpg),
+                &#39;image/format&#39;:
+                tfrecord_util.bytes_feature(&#39;jpeg&#39;.encode(&#39;utf8&#39;)),
+                &#39;image/object/bbox/xmin&#39;:
+                tfrecord_util.float_list_feature(xmin),
+                &#39;image/object/bbox/xmax&#39;:
+                tfrecord_util.float_list_feature(xmax),
+                &#39;image/object/bbox/ymin&#39;:
+                tfrecord_util.float_list_feature(ymin),
+                &#39;image/object/bbox/ymax&#39;:
+                tfrecord_util.float_list_feature(ymax),
+                &#39;image/object/area&#39;:
+                tfrecord_util.float_list_feature(area),
+                &#39;image/object/class/text&#39;:
+                tfrecord_util.bytes_list_feature(classes_text),
+                &#39;image/object/class/label&#39;:
+                tfrecord_util.int64_list_feature(classes),
+            }))
+    return example
+
+
+def main(_):
+    total_images_training = 0
+    writers = [
+        tf.python_io.TFRecordWriter(FLAGS.output_path + &#39;-%05d-of-%05d.tfrecord&#39; %
+                                    (i, FLAGS.num_shards))
+        for i in range(FLAGS.num_shards)
+    ]
+    list_all_images = glob.glob(os.path.join(FLAGS.data_dir, &#39;IMAGENES&#39;, &#39;*.jpg&#39;))
+    random.shuffle(list_all_images)  # shuffle list of images
+    num_samp_train = int(FLAGS.perc_split_training * len(list_all_images))
+    aituring_label_map_dict = create_labelmapDict_patch(list_all_images, FLAGS.data_dir)
+    label_map_dict = aituring_label_map_dict
+    class_main_names = list(label_map_dict.keys())[1::]
+    labels_by_class_dict = dict.fromkeys(class_main_names, 0)
+    create_yaml.create_yaml(class_main_names, FLAGS.output_path + &#39;_config.yaml&#39;, FLAGS.use_data_augmentation)
+    list_img_test = list_all_images[num_samp_train::]
+    for idx, name_image_ in enumerate(list_all_images[0:num_samp_train]):
+        _, tail = os.path.split(name_image_)
+        data_total = {}
+        name_file_xml_all = os.path.join(FLAGS.data_dir, &#39;LABELS&#39;, tail[0:-3] + &#39;xml&#39;)
+        if os.path.exists(name_file_xml_all):
+            with tf.gfile.GFile(name_file_xml_all, &#39;rb&#39;) as fid:
+                xml_str = fid.read()
+            xml = etree.fromstring(xml_str)
+            data_total = tfrecord_util.recursive_parse_xml_to_dict(xml)[&#39;annotation&#39;]
+            if &#39;object&#39; in data_total:
+                for obj in data_total[&#39;object&#39;]:
+                    name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;)
+                    if name_in_obj_ in labels_by_class_dict:
+                        labels_by_class_dict[name_in_obj_] += 1
+        if idx % 100 == 0:
+            logging.info(&#39;On image %d of %d&#39;, idx, int(len(list_all_images)))
+        if bool(data_total):
+            total_images_training += 1
+            tf_example = dict_to_tf_example(
+                data_total,
+                label_map_dict)
+            writers[idx % FLAGS.num_shards].write(tf_example.SerializeToString())
+    path_, _ = os.path.split(FLAGS.output_path)
+    with open(os.path.join(path_, &#39;Num_Classes.json&#39;), &#39;w&#39;) as outfile:
+        json.dump(labels_by_class_dict, outfile)
+    with open(os.path.join(FLAGS.data_dir, &#39;list_img_test.txt&#39;), &#39;w&#39;) as out_txt:
+        out_txt.writelines(&#34;%s\n&#34; % img for img in list_img_test)
+
+    for writer in writers:
+        writer.close()
+    print(&#39;---Aqui Total #####------&#39;)
+    print(total_images_training)
+    file_num_train = open(FLAGS.output_path + &#39;_samplesTrain.txt&#39;, &#34;w&#34;)
+    file_num_train.write(str(total_images_training))
+    file_num_train.close()
+
+
+if __name__ == &#39;__main__&#39;:
+    app.run(main)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="create_tfrecords.create_labelmapDict_patch"><code class="name flex">
+<span>def <span class="ident">create_labelmapDict_patch</span></span>(<span>list_all_images, path_dataset)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def create_labelmapDict_patch(list_all_images, path_dataset):
+    list_all_classes = []
+    for idx, name_image_ in enumerate(list_all_images):
+        # print(name_image_)
+        _, tail = os.path.split(name_image_)
+        temp_obj = []
+        name_file_xml_all = os.path.join(path_dataset, &#39;LABELS&#39;, tail[0:-3] + &#39;xml&#39;)
+        # print(name_file_xml_all)
+        if os.path.exists(name_file_xml_all):
+            with tf.gfile.GFile(name_file_xml_all, &#39;rb&#39;) as fid:
+                xml_str = fid.read()
+            xml = etree.fromstring(xml_str)
+            data = tfrecord_util.recursive_parse_xml_to_dict(xml)[&#39;annotation&#39;]
+            if &#39;object&#39; in data:
+                for obj in data[&#39;object&#39;]:
+                    name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;).strip()
+                    if name_in_obj_ != &#39;INCOMPLETAS&#39;:
+                        list_all_classes.append(name_in_obj_)
+                        temp_obj.append(obj)
+    list_all_classes = unique_list(list_all_classes)
+    list_all_classes.sort()
+    # list_classes = [dict_patch[name_] for name_ in list_old]
+    list_all_classes.insert(0, &#39;background&#39;)
+    labelmap_ = {el: k for k, el in enumerate(list_all_classes)}
+    return labelmap_</code></pre>
+</details>
+</dd>
+<dt id="create_tfrecords.dict_to_tf_example"><code class="name flex">
+<span>def <span class="ident">dict_to_tf_example</span></span>(<span>data, label_map_dict, ignore_difficult_instances=False)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def dict_to_tf_example(data,
+                       label_map_dict,
+                       ignore_difficult_instances=False):
+    full_path = os.path.join(FLAGS.data_dir, &#39;IMAGENES&#39;, data[&#39;filename&#39;])[0:-3] + &#39;jpg&#39;
+    image_ = cv2.imread(full_path)
+    with tf.gfile.GFile(full_path, &#39;rb&#39;) as fid:
+        encoded_jpg = fid.read()
+    encoded_jpg_io = io.BytesIO(encoded_jpg)
+    image = PIL.Image.open(encoded_jpg_io)
+    if image.format != &#39;JPEG&#39;:
+        raise ValueError(&#39;Image format not JPEG&#39;)
+    key = hashlib.sha256(encoded_jpg).hexdigest()
+    image_id = get_image_id(data[&#39;filename&#39;])
+    width = int(image_.shape[1])  # int(data[&#39;size&#39;][&#39;width&#39;])
+    height = int(image_.shape[0])  # int(data[&#39;size&#39;][&#39;height&#39;])
+    image_id = get_image_id(data[&#39;filename&#39;])
+    xmin = []
+    ymin = []
+    xmax = []
+    ymax = []
+    area = []
+    classes = []
+    classes_text = []
+    if &#39;object&#39; in data:
+        for obj in data[&#39;object&#39;]:
+            name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;).strip()
+            if name_in_obj_ in label_map_dict:
+                x_pos = [int(obj[&#39;bndbox&#39;][&#39;xmax&#39;]), int(obj[&#39;bndbox&#39;][&#39;xmin&#39;])]
+                y_pos = [int(obj[&#39;bndbox&#39;][&#39;ymax&#39;]), int(obj[&#39;bndbox&#39;][&#39;ymin&#39;])]
+                xmin.append((float(min(x_pos))) / width)
+                ymin.append((float(min(y_pos))) / height)
+                xmax.append((float(max(x_pos))) / width)
+                ymax.append((float(max(y_pos))) / height)
+                area.append((xmax[-1] - xmin[-1]) * (ymax[-1] - ymin[-1]))
+                classes_text.append(name_in_obj_.replace(&#39; &#39;, &#39;&#39;).encode(&#39;utf8&#39;))
+                classes.append(int(label_map_dict[name_in_obj_]))  # label_map_dict[obj[&#39;name&#39;]])
+
+    example = tf.train.Example(
+        features=tf.train.Features(
+            feature={
+                &#39;image/height&#39;:
+                tfrecord_util.int64_feature(height),
+                &#39;image/width&#39;:
+                tfrecord_util.int64_feature(width),
+                &#39;image/filename&#39;:
+                tfrecord_util.bytes_feature(data[&#39;filename&#39;].encode(&#39;utf8&#39;)),
+                &#39;image/source_id&#39;:
+                tfrecord_util.bytes_feature(str(image_id).encode(&#39;utf8&#39;)),
+                &#39;image/key/sha256&#39;:
+                tfrecord_util.bytes_feature(key.encode(&#39;utf8&#39;)),
+                &#39;image/encoded&#39;:
+                tfrecord_util.bytes_feature(encoded_jpg),
+                &#39;image/format&#39;:
+                tfrecord_util.bytes_feature(&#39;jpeg&#39;.encode(&#39;utf8&#39;)),
+                &#39;image/object/bbox/xmin&#39;:
+                tfrecord_util.float_list_feature(xmin),
+                &#39;image/object/bbox/xmax&#39;:
+                tfrecord_util.float_list_feature(xmax),
+                &#39;image/object/bbox/ymin&#39;:
+                tfrecord_util.float_list_feature(ymin),
+                &#39;image/object/bbox/ymax&#39;:
+                tfrecord_util.float_list_feature(ymax),
+                &#39;image/object/area&#39;:
+                tfrecord_util.float_list_feature(area),
+                &#39;image/object/class/text&#39;:
+                tfrecord_util.bytes_list_feature(classes_text),
+                &#39;image/object/class/label&#39;:
+                tfrecord_util.int64_list_feature(classes),
+            }))
+    return example</code></pre>
+</details>
+</dd>
+<dt id="create_tfrecords.get_image_id"><code class="name flex">
+<span>def <span class="ident">get_image_id</span></span>(<span>filename)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_image_id(filename):
+    del filename
+    global GLOBAL_IMG_ID
+    GLOBAL_IMG_ID += 1
+    return GLOBAL_IMG_ID</code></pre>
+</details>
+</dd>
+<dt id="create_tfrecords.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>_)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main(_):
+    total_images_training = 0
+    writers = [
+        tf.python_io.TFRecordWriter(FLAGS.output_path + &#39;-%05d-of-%05d.tfrecord&#39; %
+                                    (i, FLAGS.num_shards))
+        for i in range(FLAGS.num_shards)
+    ]
+    list_all_images = glob.glob(os.path.join(FLAGS.data_dir, &#39;IMAGENES&#39;, &#39;*.jpg&#39;))
+    random.shuffle(list_all_images)  # shuffle list of images
+    num_samp_train = int(FLAGS.perc_split_training * len(list_all_images))
+    aituring_label_map_dict = create_labelmapDict_patch(list_all_images, FLAGS.data_dir)
+    label_map_dict = aituring_label_map_dict
+    class_main_names = list(label_map_dict.keys())[1::]
+    labels_by_class_dict = dict.fromkeys(class_main_names, 0)
+    create_yaml.create_yaml(class_main_names, FLAGS.output_path + &#39;_config.yaml&#39;, FLAGS.use_data_augmentation)
+    list_img_test = list_all_images[num_samp_train::]
+    for idx, name_image_ in enumerate(list_all_images[0:num_samp_train]):
+        _, tail = os.path.split(name_image_)
+        data_total = {}
+        name_file_xml_all = os.path.join(FLAGS.data_dir, &#39;LABELS&#39;, tail[0:-3] + &#39;xml&#39;)
+        if os.path.exists(name_file_xml_all):
+            with tf.gfile.GFile(name_file_xml_all, &#39;rb&#39;) as fid:
+                xml_str = fid.read()
+            xml = etree.fromstring(xml_str)
+            data_total = tfrecord_util.recursive_parse_xml_to_dict(xml)[&#39;annotation&#39;]
+            if &#39;object&#39; in data_total:
+                for obj in data_total[&#39;object&#39;]:
+                    name_in_obj_ = obj[&#39;name&#39;].replace(&#39; &#39;, &#39;&#39;)
+                    if name_in_obj_ in labels_by_class_dict:
+                        labels_by_class_dict[name_in_obj_] += 1
+        if idx % 100 == 0:
+            logging.info(&#39;On image %d of %d&#39;, idx, int(len(list_all_images)))
+        if bool(data_total):
+            total_images_training += 1
+            tf_example = dict_to_tf_example(
+                data_total,
+                label_map_dict)
+            writers[idx % FLAGS.num_shards].write(tf_example.SerializeToString())
+    path_, _ = os.path.split(FLAGS.output_path)
+    with open(os.path.join(path_, &#39;Num_Classes.json&#39;), &#39;w&#39;) as outfile:
+        json.dump(labels_by_class_dict, outfile)
+    with open(os.path.join(FLAGS.data_dir, &#39;list_img_test.txt&#39;), &#39;w&#39;) as out_txt:
+        out_txt.writelines(&#34;%s\n&#34; % img for img in list_img_test)
+
+    for writer in writers:
+        writer.close()
+    print(&#39;---Aqui Total #####------&#39;)
+    print(total_images_training)
+    file_num_train = open(FLAGS.output_path + &#39;_samplesTrain.txt&#39;, &#34;w&#34;)
+    file_num_train.write(str(total_images_training))
+    file_num_train.close()</code></pre>
+</details>
+</dd>
+<dt id="create_tfrecords.splitall"><code class="name flex">
+<span>def <span class="ident">splitall</span></span>(<span>path)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def splitall(path):
+    allparts = []
+    while 1:
+        parts = os.path.split(path)
+        if parts[0] == path:  # sentinel for absolute paths
+            allparts.insert(0, parts[0])
+            break
+        elif parts[1] == path:  # sentinel for relative paths
+            allparts.insert(0, parts[1])
+            break
+        else:
+            path = parts[0]
+            allparts.insert(0, parts[1])
+    return allparts</code></pre>
+</details>
+</dd>
+<dt id="create_tfrecords.unique_list"><code class="name flex">
+<span>def <span class="ident">unique_list</span></span>(<span>list_)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def unique_list(list_):
+    # intilize a null list
+    unique_list = []
+
+    # traverse for all elements
+    for x in list_:
+        # check if exists in unique_list or not
+        if x not in unique_list:
+            unique_list.append(x)
+    return unique_list</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="create_tfrecords.create_labelmapDict_patch" href="#create_tfrecords.create_labelmapDict_patch">create_labelmapDict_patch</a></code></li>
+<li><code><a title="create_tfrecords.dict_to_tf_example" href="#create_tfrecords.dict_to_tf_example">dict_to_tf_example</a></code></li>
+<li><code><a title="create_tfrecords.get_image_id" href="#create_tfrecords.get_image_id">get_image_id</a></code></li>
+<li><code><a title="create_tfrecords.main" href="#create_tfrecords.main">main</a></code></li>
+<li><code><a title="create_tfrecords.splitall" href="#create_tfrecords.splitall">splitall</a></code></li>
+<li><code><a title="create_tfrecords.unique_list" href="#create_tfrecords.unique_list">unique_list</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

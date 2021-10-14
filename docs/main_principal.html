@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>main API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>main</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import os
+import sys
+os.environ[&#34;TF_CPP_MIN_LOG_LEVEL&#34;] = &#34;2&#34;
+
+# Append submodule path to python search path
+sys.path.append(os.path.join(os.getcwd(), &#39;freeze&#39;))
+sys.path.append(os.path.join(os.getcwd(), &#39;tfrmod&#39;))
+sys.path.append(os.path.join(os.getcwd(), &#39;automl&#39;, &#39;efficientdet&#39;))
+
+# Tools to parse commands, zip and tar.gz file
+import tarfile
+from zipfile import ZipFile
+from absl.flags import argparse_flags
+
+# Custom submodules
+from pipeline import command_interface
+from automl.efficientdet.main import FLAGS as flags_efficientdet
+from tfrmod.create_tfrecords import FLAGS as flags_tfrecord
+from freeze.freeze_model import FLAGS as flags_freeze
+
+
+def download_and_uncompress_backbone(backbone_name, backbone_url, backbone_save_dir):
+    &#34;&#34;&#34;
+    define_parameters method
+        This method download a pre-trained model 
+
+        Parameters:
+            backbone_name (str): model name
+            backbone_url (str): backbone url
+            backbone_save_dir (str): path to save backbone
+
+        Returns:
+            None
+    &#34;&#34;&#34;
+    # Download backbone checkpoints
+    os.system(&#39; &#39;.join([&#39;wget&#39;, &#39;--no-check-certificate&#39;, backbone_url, &#39;-O&#39;,
+                        os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;)]))
+
+    # Uncompress backbone .tar.gz files
+    tar = tarfile.open(os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;))
+    tar.extractall(backbone_save_dir)
+    tar.close()
+
+    # Delete .tar.gz backbone file
+    os.remove(os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;))
+
+
+def download_and_uncompress_dataset(dataset_url, save_dir, dataset_name):
+    &#34;&#34;&#34;
+    Function to download and uncompress dataset from S3
+
+    Parameters:
+            dataset_url (str): url from S3
+            save_dir (str): path to download dataset
+            dataset_name (str): dataset filename to save
+
+        Returns:
+            None
+    &#34;&#34;&#34;
+
+    # Download dataset from S3 (dataset must be public)
+    os.system(&#39; &#39;.join([&#39;wget&#39;, &#39;--no-check-certificate&#39;,
+                        dataset_url, &#39;-O&#39;, dataset_name]))
+    # Unzip dataset
+    with ZipFile(dataset_name, &#39;r&#39;) as zipobj:
+        zipobj.extractall(save_dir)
+    # Delete .zip dataset
+    os.remove(dataset_name)
+
+
+def main():
+    &#34;&#34;&#34;Pipeline
+
+    The following pipeline is the standard procedure 
+
+    1. Set params definitions
+    2. Set paths to workspace
+    3. Download dataset from S3
+    4. Download backbone checkpoint
+    5. run create_tfrecord method
+    6. run training method
+    7. save frozen model 
+    &#34;&#34;&#34;
+
+    # Setting default arguments:
+    parser = argparse_flags.ArgumentParser(
+        description=&#39;Command Line Tools EfficientDet Interface.&#39;, fromfile_prefix_chars=&#39;@&#39;)
+    parser.add_argument(&#39;--URL_DATASET&#39;, help=&#39;url from S3.&#39;)
+    parser.add_argument(&#39;--BACKBONE_REF&#39;, help=&#39;backbone name e.g. efficientdet-d0&#39;)
+    parser.add_argument(&#39;--NUM_EPOCHS&#39;, help=&#39;number of epochs. e.g 100&#39;)
+    parser.add_argument(&#39;--TRAIN_BATCH_SIZE&#39;, help=&#39;size of batch for training e.g. 6&#39;)
+    parser.add_argument(&#39;--EVAL_BATCH_SIZE&#39;, help=&#39;size of batch for evaluation e.g. 6&#39;)
+    parser.add_argument(&#39;--MODEL_CKPTS&#39;, help=&#39;path to save train model. (default: saved in workspace)&#39;)
+    parser.add_argument(&#39;--NUM_EXAMPLES_PER_EPOCH&#39;, help=&#39;number of examples for training an epoch&#39;)
+    
+    # Dictionary for managing paths
+    paths = {
+        &#39;WORKSPACE&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;),
+        &#39;DATASET_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;dataset&#39;),
+        &#39;MODEL_OUTPUT_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;result&#39;),
+        &#39;FROZEN_MODEL_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;frozen_model&#39;),
+        &#39;TFRECORD_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;tfrecords&#39;),
+        &#39;BACKBONE_CKPT_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;ckpt&#39;)
+    }
+
+    # Dictionary for managing files
+    files = {
+        &#39;TFRECORD_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;tfrmod&#39;, &#39;create_tfrecords.py&#39;),
+        &#39;EFFICIENTDET_MAIN_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;automl&#39;, &#39;efficientdet&#39;, &#39;main.py&#39;),
+        &#39;FREEZE_MAIN_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;freeze&#39;, &#39;freeze_model.py&#39;),
+        &#39;HPARAMS_YAML&#39;: os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord_config.yaml&#39;),
+        &#39;DATASET_FILE&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;dataset&#39;, &#39;dataset.zip&#39;),
+    }
+
+    # Dictionary for backbone url managment
+    backbone_url = {
+        &#39;efficientdet-d0&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d0.tar.gz&#39;,
+        &#39;efficientdet-d1&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d1.tar.gz&#39;,
+        &#39;efficientdet-d2&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d2.tar.gz&#39;,
+        &#39;efficientdet-d3&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d3.tar.gz&#39;
+    }
+
+    # check if not arguments are given
+    # if not args, check if env parameters were given
+    if len(sys.argv) &lt; 2 and not all([os.getenv(&#39;URL_DATASET&#39;), os.getenv(&#39;BACKBONE_REF&#39;), os.getenv(&#39;NUM_EPOCHS&#39;), os.getenv(&#39;TRAIN_BATCH_SIZE&#39;), os.getenv(&#39;MODEL_CKPTS&#39;)]):
+        parser.print_usage()
+        sys.exit(1)
+        
+    # Setting default args to workspace
+    flags_tfrecord.data_dir = paths[&#39;DATASET_DIR&#39;]
+    flags_tfrecord.output_path = os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord&#39;)
+
+    flags_efficientdet.train_file_pattern = os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord*.tfrecord&#39;)
+    flags_efficientdet.hparams = files[&#39;HPARAMS_YAML&#39;]
+
+    flags_freeze.path_yaml = files[&#39;HPARAMS_YAML&#39;]
+        
+    # Default args will be overridden if provided by command line
+    args = parser.parse_args()
+    
+    # catch environment parameters if not detected by command line or config.file
+    if not args.URL_DATASET:
+        if &#34;URL_DATASET&#34; in os.environ:
+            args.URL_DATASET = os.getenv(&#39;URL_DATASET&#39;)
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.BACKBONE_REF:
+        if &#34;BACKBONE_REF&#34; in os.environ:
+            args.BACKBONE_REF = os.getenv(&#39;BACKBONE_REF&#39;)
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.NUM_EPOCHS:
+        if &#34;NUM_EPOCHS&#34; in os.environ:
+            args.NUM_EPOCHS = int(os.getenv(&#39;NUM_EPOCHS&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.TRAIN_BATCH_SIZE:
+        if &#34;TRAIN_BATCH_SIZE&#34; in os.environ:
+            args.TRAIN_BATCH_SIZE = int(os.getenv(&#39;TRAIN_BATCH_SIZE&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.EVAL_BATCH_SIZE:
+        if &#34;EVAL_BATCH_SIZE&#34; in os.environ:
+            args.EVAL_BATCH_SIZE = int(os.getenv(&#39;EVAL_BATCH_SIZE&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.MODEL_CKPTS:
+        if &#34;MODEL_CKPTS&#34; in os.environ:
+            args.MODEL_CKPTS = os.getenv(&#39;MODEL_CKPTS&#39;)
+        else:
+            args.MODEL_CKPTS = paths[&#39;MODEL_OUTPUT_DIR&#39;]
+    if not args.NUM_EXAMPLES_PER_EPOCH:
+        if &#34;NUM_EXAMPLES_PER_EPOCH&#34; in os.environ:
+            args.NUM_EXAMPLES_PER_EPOCH = int(os.getenv(&#39;NUM_EXAMPLES_PER_EPOCH&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+
+
+    # Create workspace directories
+    try:
+        os.mkdir(paths[&#39;WORKSPACE&#39;])
+        os.mkdir(paths[&#39;DATASET_DIR&#39;])
+        os.mkdir(paths[&#39;MODEL_OUTPUT_DIR&#39;])
+        os.mkdir(paths[&#39;FROZEN_MODEL_DIR&#39;])
+        os.mkdir(paths[&#39;TFRECORD_DIR&#39;])
+        os.mkdir(paths[&#39;BACKBONE_CKPT_DIR&#39;])
+        os.mkdir(args.MODEL_CKPTS)
+    except OSError:
+        pass
+    print(args.MODEL_CKPTS,  &#34; YEAHHH&#34;)
+
+    # Update flags provided by command line
+    flags_efficientdet.model_name = args.BACKBONE_REF
+    flags_efficientdet.backbone_ckpt = os.path.join(paths[&#39;BACKBONE_CKPT_DIR&#39;], args.BACKBONE_REF)
+    flags_efficientdet.model_dir = args.MODEL_CKPTS
+    flags_efficientdet.num_epochs = args.NUM_EPOCHS
+    flags_efficientdet.train_batch_size = args.TRAIN_BATCH_SIZE
+    flags_efficientdet.eval_batch_size = args.EVAL_BATCH_SIZE
+    flags_efficientdet.num_examples_per_epoch = args.NUM_EXAMPLES_PER_EPOCH
+
+    # Get folder name for results
+    path_ckpt = os.path.basename(os.path.normpath(args.MODEL_CKPTS))
+
+    # Set output dir for frozen model
+    flags_freeze.path_ckpt = os.path.join(paths[&#39;MODEL_OUTPUT_DIR&#39;], path_ckpt)
+    flags_freeze.model_name_ = args.BACKBONE_REF
+    if not flags_freeze.path_output:
+        flags_freeze.path_output = os.path.join(paths[&#39;FROZEN_MODEL_DIR&#39;], path_ckpt + &#39;_freeze&#39;)
+
+
+    # Download dataset from S3
+    download_and_uncompress_dataset(args.URL_DATASET, paths[&#39;DATASET_DIR&#39;], files[&#39;DATASET_FILE&#39;])
+
+    # Download backbone checkpoints
+    download_and_uncompress_backbone(args.BACKBONE_REF, backbone_url[args.BACKBONE_REF], paths[&#39;BACKBONE_CKPT_DIR&#39;])
+
+    # Command Interface
+    commandI = command_interface.Inteface(args_tfrecords=flags_tfrecord,
+                                          args_efficientdet=flags_efficientdet,
+                                          args_freeze=flags_freeze,
+                                          paths=paths,
+                                          files=files)
+
+    # 1. Create tfrecord files
+    commandI.create_tfrecord()
+
+    # 2. Start trainning pipeline
+    commandI.run_training()
+
+    # 3. Save trained model
+    commandI.save_frozen_model()
+
+
+if __name__ == &#39;__main__&#39;:
+    main()</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="main.download_and_uncompress_backbone"><code class="name flex">
+<span>def <span class="ident">download_and_uncompress_backbone</span></span>(<span>backbone_name, backbone_url, backbone_save_dir)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>define_parameters method
+This method download a pre-trained model </p>
+<pre><code>Parameters:
+    backbone_name (str): model name
+    backbone_url (str): backbone url
+    backbone_save_dir (str): path to save backbone
+
+Returns:
+    None
+</code></pre></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def download_and_uncompress_backbone(backbone_name, backbone_url, backbone_save_dir):
+    &#34;&#34;&#34;
+    define_parameters method
+        This method download a pre-trained model 
+
+        Parameters:
+            backbone_name (str): model name
+            backbone_url (str): backbone url
+            backbone_save_dir (str): path to save backbone
+
+        Returns:
+            None
+    &#34;&#34;&#34;
+    # Download backbone checkpoints
+    os.system(&#39; &#39;.join([&#39;wget&#39;, &#39;--no-check-certificate&#39;, backbone_url, &#39;-O&#39;,
+                        os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;)]))
+
+    # Uncompress backbone .tar.gz files
+    tar = tarfile.open(os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;))
+    tar.extractall(backbone_save_dir)
+    tar.close()
+
+    # Delete .tar.gz backbone file
+    os.remove(os.path.join(backbone_save_dir, backbone_name + &#39;tar.gz&#39;))</code></pre>
+</details>
+</dd>
+<dt id="main.download_and_uncompress_dataset"><code class="name flex">
+<span>def <span class="ident">download_and_uncompress_dataset</span></span>(<span>dataset_url, save_dir, dataset_name)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Function to download and uncompress dataset from S3</p>
+<h2 id="parameters">Parameters</h2>
+<pre><code>dataset_url (str): url from S3
+save_dir (str): path to download dataset
+dataset_name (str): dataset filename to save
+</code></pre>
+<p>Returns:
+None</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def download_and_uncompress_dataset(dataset_url, save_dir, dataset_name):
+    &#34;&#34;&#34;
+    Function to download and uncompress dataset from S3
+
+    Parameters:
+            dataset_url (str): url from S3
+            save_dir (str): path to download dataset
+            dataset_name (str): dataset filename to save
+
+        Returns:
+            None
+    &#34;&#34;&#34;
+
+    # Download dataset from S3 (dataset must be public)
+    os.system(&#39; &#39;.join([&#39;wget&#39;, &#39;--no-check-certificate&#39;,
+                        dataset_url, &#39;-O&#39;, dataset_name]))
+    # Unzip dataset
+    with ZipFile(dataset_name, &#39;r&#39;) as zipobj:
+        zipobj.extractall(save_dir)
+    # Delete .zip dataset
+    os.remove(dataset_name)</code></pre>
+</details>
+</dd>
+<dt id="main.main"><code class="name flex">
+<span>def <span class="ident">main</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Pipeline</p>
+<p>The following pipeline is the standard procedure </p>
+<ol>
+<li>Set params definitions</li>
+<li>Set paths to workspace</li>
+<li>Download dataset from S3</li>
+<li>Download backbone checkpoint</li>
+<li>run create_tfrecord method</li>
+<li>run training method</li>
+<li>save frozen model</li>
+</ol></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def main():
+    &#34;&#34;&#34;Pipeline
+
+    The following pipeline is the standard procedure 
+
+    1. Set params definitions
+    2. Set paths to workspace
+    3. Download dataset from S3
+    4. Download backbone checkpoint
+    5. run create_tfrecord method
+    6. run training method
+    7. save frozen model 
+    &#34;&#34;&#34;
+
+    # Setting default arguments:
+    parser = argparse_flags.ArgumentParser(
+        description=&#39;Command Line Tools EfficientDet Interface.&#39;, fromfile_prefix_chars=&#39;@&#39;)
+    parser.add_argument(&#39;--URL_DATASET&#39;, help=&#39;url from S3.&#39;)
+    parser.add_argument(&#39;--BACKBONE_REF&#39;, help=&#39;backbone name e.g. efficientdet-d0&#39;)
+    parser.add_argument(&#39;--NUM_EPOCHS&#39;, help=&#39;number of epochs. e.g 100&#39;)
+    parser.add_argument(&#39;--TRAIN_BATCH_SIZE&#39;, help=&#39;size of batch for training e.g. 6&#39;)
+    parser.add_argument(&#39;--EVAL_BATCH_SIZE&#39;, help=&#39;size of batch for evaluation e.g. 6&#39;)
+    parser.add_argument(&#39;--MODEL_CKPTS&#39;, help=&#39;path to save train model. (default: saved in workspace)&#39;)
+    parser.add_argument(&#39;--NUM_EXAMPLES_PER_EPOCH&#39;, help=&#39;number of examples for training an epoch&#39;)
+    
+    # Dictionary for managing paths
+    paths = {
+        &#39;WORKSPACE&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;),
+        &#39;DATASET_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;dataset&#39;),
+        &#39;MODEL_OUTPUT_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;result&#39;),
+        &#39;FROZEN_MODEL_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;frozen_model&#39;),
+        &#39;TFRECORD_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;tfrecords&#39;),
+        &#39;BACKBONE_CKPT_DIR&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;ckpt&#39;)
+    }
+
+    # Dictionary for managing files
+    files = {
+        &#39;TFRECORD_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;tfrmod&#39;, &#39;create_tfrecords.py&#39;),
+        &#39;EFFICIENTDET_MAIN_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;automl&#39;, &#39;efficientdet&#39;, &#39;main.py&#39;),
+        &#39;FREEZE_MAIN_SCRIPT&#39;: os.path.join(os.getcwd(), &#39;freeze&#39;, &#39;freeze_model.py&#39;),
+        &#39;HPARAMS_YAML&#39;: os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord_config.yaml&#39;),
+        &#39;DATASET_FILE&#39;: os.path.join(os.getcwd(), &#39;workspace&#39;, &#39;dataset&#39;, &#39;dataset.zip&#39;),
+    }
+
+    # Dictionary for backbone url managment
+    backbone_url = {
+        &#39;efficientdet-d0&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d0.tar.gz&#39;,
+        &#39;efficientdet-d1&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d1.tar.gz&#39;,
+        &#39;efficientdet-d2&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d2.tar.gz&#39;,
+        &#39;efficientdet-d3&#39;: &#39;https://storage.googleapis.com/cloud-tpu-checkpoints/efficientdet/coco2/efficientdet-d3.tar.gz&#39;
+    }
+
+    # check if not arguments are given
+    # if not args, check if env parameters were given
+    if len(sys.argv) &lt; 2 and not all([os.getenv(&#39;URL_DATASET&#39;), os.getenv(&#39;BACKBONE_REF&#39;), os.getenv(&#39;NUM_EPOCHS&#39;), os.getenv(&#39;TRAIN_BATCH_SIZE&#39;), os.getenv(&#39;MODEL_CKPTS&#39;)]):
+        parser.print_usage()
+        sys.exit(1)
+        
+    # Setting default args to workspace
+    flags_tfrecord.data_dir = paths[&#39;DATASET_DIR&#39;]
+    flags_tfrecord.output_path = os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord&#39;)
+
+    flags_efficientdet.train_file_pattern = os.path.join(paths[&#39;TFRECORD_DIR&#39;], &#39;tfrecord*.tfrecord&#39;)
+    flags_efficientdet.hparams = files[&#39;HPARAMS_YAML&#39;]
+
+    flags_freeze.path_yaml = files[&#39;HPARAMS_YAML&#39;]
+        
+    # Default args will be overridden if provided by command line
+    args = parser.parse_args()
+    
+    # catch environment parameters if not detected by command line or config.file
+    if not args.URL_DATASET:
+        if &#34;URL_DATASET&#34; in os.environ:
+            args.URL_DATASET = os.getenv(&#39;URL_DATASET&#39;)
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.BACKBONE_REF:
+        if &#34;BACKBONE_REF&#34; in os.environ:
+            args.BACKBONE_REF = os.getenv(&#39;BACKBONE_REF&#39;)
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.NUM_EPOCHS:
+        if &#34;NUM_EPOCHS&#34; in os.environ:
+            args.NUM_EPOCHS = int(os.getenv(&#39;NUM_EPOCHS&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.TRAIN_BATCH_SIZE:
+        if &#34;TRAIN_BATCH_SIZE&#34; in os.environ:
+            args.TRAIN_BATCH_SIZE = int(os.getenv(&#39;TRAIN_BATCH_SIZE&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.EVAL_BATCH_SIZE:
+        if &#34;EVAL_BATCH_SIZE&#34; in os.environ:
+            args.EVAL_BATCH_SIZE = int(os.getenv(&#39;EVAL_BATCH_SIZE&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+    if not args.MODEL_CKPTS:
+        if &#34;MODEL_CKPTS&#34; in os.environ:
+            args.MODEL_CKPTS = os.getenv(&#39;MODEL_CKPTS&#39;)
+        else:
+            args.MODEL_CKPTS = paths[&#39;MODEL_OUTPUT_DIR&#39;]
+    if not args.NUM_EXAMPLES_PER_EPOCH:
+        if &#34;NUM_EXAMPLES_PER_EPOCH&#34; in os.environ:
+            args.NUM_EXAMPLES_PER_EPOCH = int(os.getenv(&#39;NUM_EXAMPLES_PER_EPOCH&#39;))
+        else:
+            parser.print_usage()
+            sys.exit(1)
+
+
+    # Create workspace directories
+    try:
+        os.mkdir(paths[&#39;WORKSPACE&#39;])
+        os.mkdir(paths[&#39;DATASET_DIR&#39;])
+        os.mkdir(paths[&#39;MODEL_OUTPUT_DIR&#39;])
+        os.mkdir(paths[&#39;FROZEN_MODEL_DIR&#39;])
+        os.mkdir(paths[&#39;TFRECORD_DIR&#39;])
+        os.mkdir(paths[&#39;BACKBONE_CKPT_DIR&#39;])
+        os.mkdir(args.MODEL_CKPTS)
+    except OSError:
+        pass
+    print(args.MODEL_CKPTS,  &#34; YEAHHH&#34;)
+
+    # Update flags provided by command line
+    flags_efficientdet.model_name = args.BACKBONE_REF
+    flags_efficientdet.backbone_ckpt = os.path.join(paths[&#39;BACKBONE_CKPT_DIR&#39;], args.BACKBONE_REF)
+    flags_efficientdet.model_dir = args.MODEL_CKPTS
+    flags_efficientdet.num_epochs = args.NUM_EPOCHS
+    flags_efficientdet.train_batch_size = args.TRAIN_BATCH_SIZE
+    flags_efficientdet.eval_batch_size = args.EVAL_BATCH_SIZE
+    flags_efficientdet.num_examples_per_epoch = args.NUM_EXAMPLES_PER_EPOCH
+
+    # Get folder name for results
+    path_ckpt = os.path.basename(os.path.normpath(args.MODEL_CKPTS))
+
+    # Set output dir for frozen model
+    flags_freeze.path_ckpt = os.path.join(paths[&#39;MODEL_OUTPUT_DIR&#39;], path_ckpt)
+    flags_freeze.model_name_ = args.BACKBONE_REF
+    if not flags_freeze.path_output:
+        flags_freeze.path_output = os.path.join(paths[&#39;FROZEN_MODEL_DIR&#39;], path_ckpt + &#39;_freeze&#39;)
+
+
+    # Download dataset from S3
+    download_and_uncompress_dataset(args.URL_DATASET, paths[&#39;DATASET_DIR&#39;], files[&#39;DATASET_FILE&#39;])
+
+    # Download backbone checkpoints
+    download_and_uncompress_backbone(args.BACKBONE_REF, backbone_url[args.BACKBONE_REF], paths[&#39;BACKBONE_CKPT_DIR&#39;])
+
+    # Command Interface
+    commandI = command_interface.Inteface(args_tfrecords=flags_tfrecord,
+                                          args_efficientdet=flags_efficientdet,
+                                          args_freeze=flags_freeze,
+                                          paths=paths,
+                                          files=files)
+
+    # 1. Create tfrecord files
+    commandI.create_tfrecord()
+
+    # 2. Start trainning pipeline
+    commandI.run_training()
+
+    # 3. Save trained model
+    commandI.save_frozen_model()</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="main.download_and_uncompress_backbone" href="#main.download_and_uncompress_backbone">download_and_uncompress_backbone</a></code></li>
+<li><code><a title="main.download_and_uncompress_dataset" href="#main.download_and_uncompress_dataset">download_and_uncompress_dataset</a></code></li>
+<li><code><a title="main.main" href="#main.main">main</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
