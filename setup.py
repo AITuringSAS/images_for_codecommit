@@ -19,7 +19,7 @@ setup(
         'tensorboard==2.5.0',
         'tensorboard-data-server==0.6.0',
         'tensorboard-plugin-wit==1.8.0',
-        'tensorflow==2.5.0',
+        'tensorflow>=2.5.0',
         'tensorflow-estimator==2.5.0',
         'tensorflow-model-optimization==0.5.1.dev0'
         'wget==3.2; sys_platform=="win32"',
